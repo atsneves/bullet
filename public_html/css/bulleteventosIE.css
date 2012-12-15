@@ -1,0 +1,19 @@
+.talkability{
+	left: 0 !important;
+}
+address{
+	margin: 15px 75px !important;
+}
+.row-fluid .span3{
+	width: 22% !important;
+}
+input[type="checkbox"] {
+    display:block !important;
+    float: left;
+}
+input[type="checkbox"] + label span {
+    background: transparent !important;
+}
+input[type="checkbox"] + label {
+	float: left;
+}

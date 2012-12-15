@@ -1,0 +1,216 @@
+
+
+
+<div class="cadTitle" id="form">
+                        <strong>CADASTRO DE </strong><span>PRODUTORES</span>
+
+                        <form id="formCadastro" method="post" class="bulletForm" action="/index/actincluir">
+                            <input class="input-xxlarge" name="nome" id="nome" type="text" placeholder="NOME" title="Preencha com o nome completo" autofocus>
+                            <input class="input-xxlarge" name="facebook" id="facebook" type="text" placeholder="FACEBOOK" title="Coloque o endereço do seu Facebook aqui">
+                            <input class="input-xxlarge" name="rg" id="rg" type="text" placeholder="RG" pattern="\d{2}.\d{3}.\d{3}" title="Preencha com o seu RG sem o dígito">
+                            <input class="input-xxlarge" name="cpf" id="cpf" type="text" placeholder="CPF" pattern="\d{3}.\d{3}.\d{3}-\d{2}" title="Preencha com seu CPF">
+                            <div class="bulletFormEndereco">
+                                <input style="width: 125px;" name="cep" id="cep" onBlur="getEndereco();"  pattern="\d{5}-\d{3}" title="Preencha com seu CEP" type="text" placeholder="CEP">
+                                <input style="width: 15px; text-align: center;" name="uf" type="text" id="uf" placeholder="UF" title="Coloque a sigla de seu estado">
+                                <input style="width: 205px;" type="text" name="cidade" placeholder="CIDADE" id="cidade" title="Preencha com sua cidade">
+                            </div>
+                            <input class="input-xxlarge" type="text" placeholder="ENDEREÇO" name="endereco" id="endereco" title="Coloque aqui seu endereço com nº e complemento">
+                            <input class="input-xxlarge" id="telefone" type="tel" name="telefone" pattern="[\(]\d{2}[\)][ ]\d{4}[\-]\d{4}" placeholder="TELEFONE" title="Preencha com seu telefone fixo">
+                            <input class="input-xxlarge" id="celular" type="tel" name="celular" pattern="[\(]\d{2}[\)][ ]\d{5}[\-]\d{4}" placeholder="CELULAR" title="Preencha com seu telefone celular">
+                            <input class="input-xxlarge" type="email" name="email" placeholder="EMAIL" title="Preencha com seu email">
+                            <textarea rows="3" placeholder="FORMAÇÃO ACADEMICA" name="formacao" title="Preencha com sua formação academica"></textarea>
+                            <textarea rows="3" placeholder="ATIVIDADES COMPLEMENTARES" name="atividades" title="Preencha com suas atividades complementares"></textarea>
+                            <textarea rows="3" placeholder="DESCRITIVO DOS ÚLTIMOS 5 TRABALHOS" name="descritivo" title="Preencha com detalhes de seus últimos 5 trabalhos realizados"></textarea>
+                            <textarea rows="3" placeholder="INFORMAÇÕES COMPLEMENTARES" name="informacoes" title="Caso tenha alguma informação complementar, preencha aqui"></textarea>
+                            <input class="input-xxlarge" type="text" name="perfil" placeholder="PERFIL PROFISSIONAL EM 5 PALAVRAS" title="Defina em 5 palavras seu perfil profissional">
+                            
+                            <br />
+
+                            <strong>MARQUE AS ATIVIDADES QUE VOCÊ </strong> <br /> <span>PODE EXERCER NO EVENTO</span>
+
+                            <div class="checks">
+                                <input type="checkbox" name="master" value="1" id="produtor_master"/>
+                                <label for="produtor_master"><span></span>PRODUTOR MASTER</label>
+                                <div class="infoVal">
+                                    <input class="input-xxlarge valor" name="master_min_diario" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ DIÁRIO" title="Informe o valor mínimo de seu cachê diário">
+                                    <input class="input-xxlarge valor" name="master_min_mensal" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ MENSAL" title="Informe o valor mínimo de seu cachê mensal">
+                                </div>
+                            </div>
+
+                            <div class="checks">
+                                <input type="checkbox" name="executivo" value="1" id="produtor_executivo"/>
+                                <label for="produtor_executivo"><span></span>PRODUTOR EXECUTIVO</label>
+                                <div class="infoVal">
+                                    <input class="input-xxlarge valor" name="executivo_min_diario" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ DIÁRIO" title="Informe o valor mínimo de seu cachê diário">
+                                    <input class="input-xxlarge valor" name="executivo_min_mensal" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ MENSAL" title="Informe o valor mínimo de seu cachê mensal">
+                                </div>
+                            </div>
+
+                            <div class="checks">
+                                <input type="checkbox" name="assistente" value="1" id="assistente"/>
+                                <label for="assistente"><span></span>ASSISTENTE</label>
+                                <div class="infoVal">
+                                    <input class="input-xxlarge valor" name="assistente_min_diario" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ DIÁRIO" title="Informe o valor mínimo de seu cachê diário">
+                                    <input class="input-xxlarge valor" name="assistente_min_mensal" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ MENSAL" title="Informe o valor mínimo de seu cachê mensal">
+                                </div>
+                            </div>
+
+                            <div class="checks">
+                                <input type="checkbox" name="produtor" value="1" id="produtor_ab"/>
+                                <label for="produtor_ab"><span></span>PRODUTOR DE A&B</label>
+                                <div class="infoVal">
+                                    <input class="input-xxlarge valor" name="produtor_min_diario" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ DIÁRIO" title="Informe o valor mínimo de seu cachê diário">
+                                    <input class="input-xxlarge valor" name="produtor_min_mensal" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ MENSAL" title="Informe o valor mínimo de seu cachê mensal">
+                                </div>
+                            </div>
+
+                            <div class="checks">
+                                <input type="checkbox" name="servicos" value="1" id="produtor_servicos"/>
+                                <label for="produtor_servicos"><span></span>PRODUTOR DE SERVIÇOS</label>
+                                <div class="infoVal">
+                                    <input class="input-xxlarge valor" name="servicos_min_diario" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ DIÁRIO" title="Informe o valor mínimo de seu cachê diário">
+                                    <input class="input-xxlarge valor" name="servicos_min_mensal" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ MENSAL" title="Informe o valor mínimo de seu cachê mensal">
+                                </div>
+                            </div>
+
+                            <div class="checks">
+                                <input type="checkbox" name="financeiro" value="1" id="produtor_financeiro"/>
+                                <label for="produtor_financeiro"><span></span>PRODUTOR FINANCEIRO</label>
+                                <div class="infoVal">
+                                    <input class="input-xxlarge valor" name="financeiro_min_diario" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ DIÁRIO" title="Informe o valor mínimo de seu cachê diário">
+                                    <input class="input-xxlarge valor" name="financeiro_min_mensal" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ MENSAL" title="Informe o valor mínimo de seu cachê mensal">
+                                </div>
+                            </div>
+
+                             <div class="checks">
+                                <input type="checkbox" value="1" name="logistico" id="produtor_logistico"/>
+                                <label for="produtor_logistico"><span></span>PRODUTOR LOGÍSTICO</label>
+                                <div class="infoVal">
+                                    <input class="input-xxlarge valor" name="logistico_min_diario" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ DIÁRIO" title="Informe o valor mínimo de seu cachê diário">
+                                    <input class="input-xxlarge valor" name="logistico_min_mensal" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ MENSAL" title="Informe o valor mínimo de seu cachê mensal">
+                                </div>
+                            </div>
+
+                             <div class="checks">
+                                <input type="checkbox" name="apoio" value="1" id="apoio"/>
+                                <label for="apoio"><span></span>APOIO</label>
+                                <div class="infoVal">
+                                    <input class="input-xxlarge valor" name="apoio_min_diario" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ DIÁRIO" title="Informe o valor mínimo de seu cachê diário">
+                                    <input class="input-xxlarge valor" name="apoio_min_mensal" type="text" placeholder="VALOR MÍNIMO PRA CACHÊ MENSAL" title="Informe o valor mínimo de seu cachê mensal">
+                                </div>
+                            </div>
+							<button type="submit">Enviar</button>
+                        </form>
+                    </div>
+                    <div id="resultado" style="display: none;" class="loading">Salvando</div>
+<script>
+	
+	$(document).ready(function(){
+		$(".infoVal").css("display","none");
+		
+		$("input[type='checkbox']").click(function(){
+			if($(this).is(":checked"))
+			{
+				$(this).next().next().slideDown();
+				
+			}	
+			else{
+				$(this).next().next().slideUp();
+			}
+				
+			
+		});
+	
+		
+		$('#formCadastro').validate({
+			onkeyup: false,
+			rules: {
+				nome : {required:true},
+				email : {required: true, email: true},
+				rg			: {required: true},
+				cpf			: {required: true},
+				cep		: {required: true},
+				celular		: {required: true}
+			},
+			messages: {
+				nome: {
+	            	required: "O campo Nome é obrigatório"
+				},
+				email: {
+	            	required: "Preencha o campo e-mail corretamente"
+				},
+				rg: {
+	            	required: "O campo RG é obrigatório"
+				},
+				cpf: {
+	            	required: "O campo CPF é obrigatório"
+				},
+				cep: {
+	            	required: "O campo CEP é obrigatório"
+				},
+				celular: {
+	            	required: "O campo celular é obrigatório"
+				}
+				
+			},
+			
+			submitHandler: function(form){
+				
+				$("#form").slideUp("slow",function(){
+					$("#resultado").slideDown();
+				});
+				
+				
+				$(form).ajaxSubmit(function(data){
+					
+					if (data >= 1)
+					{
+						$("#resultado").html("Formulário salvo com sucesso. Obrigado por seu cadastro");
+					}
+					else
+					{
+						$("#resultado").html("Ocorreu um erro ao salvar formulário. "+data);
+					}
+				});
+	
+			}
+		});
+		
+			
+	});
+	
+	
+	
+	
+	function getEndereco() {
+			// Se o campo CEP não estiver vazio
+			if($.trim($("#cep").val()) != ""){
+				/*
+					Para conectar no serviço e executar o json, precisamos usar a função
+					getScript do jQuery, o getScript e o dataType:"jsonp" conseguem fazer o cross-domain, os outros
+					dataTypes não possibilitam esta interação entre domínios diferentes
+					Estou chamando a url do serviço passando o parâmetro "formato=javascript" e o CEP digitado no formulário
+					http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+$("#cep").val()
+				*/
+				$.getScript("http://cep.republicavirtual.com.br/web_cep.php?formato=javascript&cep="+$("#cep").val(), function(){
+					// o getScript dá um eval no script, então é só ler!
+					//Se o resultado for igual a 1
+			  		if(resultadoCEP["resultado"]){
+						// troca o valor dos elementos
+						$("#endereco").val(unescape(resultadoCEP["tipo_logradouro"])+": "+unescape(resultadoCEP["logradouro"]));
+						//$("#bairro").val(unescape(resultadoCEP["bairro"]));
+						$("#cidade").val(unescape(resultadoCEP["cidade"]));
+						$("#uf").val(unescape(resultadoCEP["uf"]));
+					}else{
+						alert("Endereço não encontrado");
+					}
+				});
+			}
+	}
+	
+	
+</script>
+
+
+
+       

@@ -1,0 +1,40 @@
+<div class="cadTitle">
+<form action="/index/actlogin" method="post" id="frmLogin" name="frmLogin">	
+<strong>FORMULÁRIO DE</strong><span> LOGIN</span>
+<input class="input-xxlarge" type="text" id="login" name="login" placeholder="Usuário" title="Preencha com o nome completo" autofocus>
+<br>
+<input class="input-xxlarge" type="password" id="senha" name="senha" placeholder="Senha" title="Preencha com o nome completo">
+<br>
+<button type="submit">Entrar</button>
+</form>
+</div>
+<div id="resultado" class="loading" style="display: none;">Entrando</div>
+
+<script>
+	$(document).ready(function(){
+		$('#frmLogin').validate({
+			onkeyup: false,
+			rules: {
+				login : {required:true},
+				senha : {required: true}
+			},
+			messages: {
+				login: {
+	            	required: "O campo Login é obrigatório"
+				},
+				senha: {
+	            	required: "Senha é obrigatório"
+				}
+			},
+			submitHandler: function(form){
+				$(form).ajaxSubmit(function(data){
+					if(data > 0)
+						location.href="/index/relatorio";
+					else
+						alert("Usuário ou senha inválidos");	
+				});
+			}
+		});
+	});
+	
+</script>

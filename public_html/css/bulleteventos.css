@@ -1,0 +1,169 @@
+body{
+	background: #f5f5f5;
+	color: #5a5a5a;
+}
+address{
+	display: block;
+	font-size: 11px;
+	font-style: normal;
+	color: #A0A0A0;
+	z-index: 2;
+	margin: 15px 0;
+}
+address a {
+	color: #A0A0A0;
+	text-decoration: underline;
+}
+img{
+	border: none;
+}
+textarea{
+	resize: none;
+}
+@font-face {
+	font-family: "bullet";
+	font-style: normal;
+	font-weight: normal;
+	line-height: normal;
+	src: url("http://www.bulleteventos.com.br/wp-content/themes/bullet_eventos/fontes/universltstd-ultracn-webfont.eot");
+	src: local("universltstdultracn"), url("font/universltstdultracn.ttf") format("truetype");
+}
+
+.sideBar{
+	background: #DFDFDF;
+	height: 700px;
+	text-align: center;
+	border-radius: 4px;
+	-moz-border-radius: 4px;
+	-webkit-border-radius: 4px;
+}
+.sideBar img{
+	top: 33px;
+	position: relative;
+}
+.talkability{
+	background: #CACACA;
+	position: relative;
+	top: 60px;
+	padding: 10px;
+	width: 75%;
+	left: 30px;
+	border-radius: 5px;
+}
+.talkability img{
+	background: url(../img/talkability.png) 0 0 no-repeat;
+	width: 209px !important;
+	height: 85px;
+	top: 0;
+}
+.talkability:hover img{
+	background: url(../img/talkability.png) 0 -83px no-repeat;
+}
+.cadTitle{
+	font: normal 24px "bullet";
+}
+.cadTitle span{
+	color: #dc2e1f;
+}
+.bulletForm{
+	position: relative;
+	top: 15px;
+}
+.bulletForm input{
+	font: normal 16px "bullet";
+	background: #EAEAEA;
+	border: 1px solid #EAEAEA;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+     -moz-box-shadow: none;
+}
+.bulletForm textarea{
+	font: normal 16px "bullet";
+	background: #EAEAEA;
+	border: 1px solid #EAEAEA;
+	box-shadow: none;
+	-webkit-box-shadow: none;
+     -moz-box-shadow: none;
+     width: 380px;
+     height: 80px;
+}
+.bulletFormEndereco{
+	margin-bottom: -8px;
+}
+.tooltip {
+    background-color:#000;
+    border:1px solid #fff;
+    padding:10px 15px;
+    width:200px;
+    display:none;
+    color:#fff;
+    text-align:left;
+    font: normal 16px "bullet";
+    letter-spacing: 1px;
+ 
+    /* outline radius for mozilla/firefox only */
+    -moz-box-shadow:0 0 10px #000;
+    -webkit-box-shadow:0 0 10px #000;
+}
+.checks{
+	position: relative;
+	top: 10px;
+	left: 20px;
+	margin: 20px 0;
+}
+.infoVal{
+	display: block;
+}
+/* ================================= CHECKBOX ================================= */
+input[type="checkbox"] {
+    display:none;
+}
+
+input[type="checkbox"] + label {
+    font-size:24px;
+    color: #aeaeae;
+}
+
+input[type="checkbox"] + label span {
+    display:inline-block;
+    width:15px;
+    height:19px;
+    margin:-5px 4px 0 0;
+    vertical-align:middle;
+    background:url(../img/check.png) left top no-repeat;
+    cursor:pointer;
+}
+
+input[type="checkbox"]:checked + label span {
+    background:url(../img/check.png) -13px top no-repeat;
+}
+input[type="checkbox"]:checked + label {
+    color: #5a5a5a;
+}
+
+input[type="radio"] {
+    display:none;
+}
+
+input[type="radio"] + label {
+    color:#f2f2f2;
+    font-family:Arial, sans-serif;
+    font-size:14px;
+}
+
+input[type="radio"] + label span {
+    display:inline-block;
+    width:19px;
+    height:19px;
+    margin:-1px 4px 0 0;
+    vertical-align:middle;
+    background:url(check_radio_sheet.png) -38px top no-repeat;
+    cursor:pointer;
+}
+
+input[type="radio"]:checked + label span {
+    background:url(check_radio_sheet.png) -57px top no-repeat;
+}
+.error{
+	color:#DC2E1F;
+}
